@@ -1,9 +1,20 @@
-import React from 'react'
+import Form from "./Components/Form";
 
-export default function App() {
+let isUserLoggedIn= false;
+
+
+// Example of ternary operator:
+
+// condition ? d if true: do if false
+// isCloud === true ? bringUmbrella(): bringSunscreen()
+
+
+function App() {
   return (
-    <div>
-      <h2>Heading</h2>
+    <div className="container">
+        {isUserLoggedIn===true ? <h1>Hello</h1> : <Form/>}
     </div>
-  )
+  );
 }
+
+export default App;
