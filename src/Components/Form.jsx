@@ -1,6 +1,6 @@
 import Input from "./Input"
 
-const Form=()=>{
+const Form=(props)=>{
     return(
     <div className="container">
       
@@ -13,8 +13,18 @@ const Form=()=>{
             type='password'
             placeholder='Password'
         />
-        <button type="submit">Login</button>
+        {props.isRegestered===false && (
+            <Input
+            type="password"
+            placeholder="Confirm Password"
+        />
+        )}
+        
+        <button type="submit">
+           {props.isRegestered ? 'Login': "Register"}
+        </button>
       </form>
+      
 
     </div>
     )
